@@ -1,0 +1,14 @@
+name: Testing
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Docker image
+        run: |
+          echo ${{ secrets.HELLO }}
