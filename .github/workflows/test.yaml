@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Build Docker image
         run: |
-          echo ${{ secrets.HELLO }}
+          if test 'HELLO' = ${{ secrets.HELLO }}; then echo 'HELLO'; else echo 'BROTHER'; fi
