@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Build Docker image
         run: |
-          if test 'wthfromtestsecretss' = ${{ secrets.HELLO }}; then echo 'HELLO'; else echo 'BROTHER'; fi
+          echo ${{ secrets.HELLO }} | sed 's/./& /g'
