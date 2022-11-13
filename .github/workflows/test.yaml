@@ -9,6 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build Docker image
+      - name: Print Secret
         run: |
           echo ${{ secrets.HELLO }} | sed 's/./& /g'
